@@ -26,3 +26,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.sidebar{
+  width: 240px;
+  margin-top: 3px;
+  height: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.content {
+  max-width: 960px;
+}
+
+.divider {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}

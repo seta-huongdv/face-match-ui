@@ -9,7 +9,6 @@ class Home extends React.Component {
                 <Link to='/details'>details</Link>
                 <h1>HomePage</h1>
             </React.Fragment>
-
         );
     }
 }
