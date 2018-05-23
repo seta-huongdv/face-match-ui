@@ -1,0 +1,30 @@
+
+.topBar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 51px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e8e8e8;
+    z-index: 900;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .117647), 0 1px 4px rgba(0, 0, 0, .117647);
+}
+.topbar-inner {
+    width: 240px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-right: 1px solid #eee;
+}
+
+.topbar__btn {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    text-transform: uppercase;
+    color: #fff !important;
+    width: 60%
+}

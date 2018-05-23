@@ -12,6 +12,8 @@ class Details extends React.Component {
                 <Button variant="raised" color="primary" className="j52 j169 j175 j176 j211">
                     Primary
                 </Button>
+
+
             </React.Fragment>
         );
     }
