@@ -6,7 +6,8 @@ import { ROUTE_EXAMPLE_TABS } from 'state/modules/routing';
 import AppContainer from 'components/AppContainer';
 import AppBar from 'components/AppBar';
 import TopBar from 'components/TopBar';
-import SideBar from 'components/SideBar';
+import SideBar from 'components/SideBar';//MediaProcessTabs
+import MediaProcessTabs from 'components/MediaProcessTabs';//MediaProcessTabs
 import ContentContainer from 'components/ContentContainer';
 
 export default class Home extends React.Component {
@@ -29,7 +30,7 @@ export default class Home extends React.Component {
                 <Link to={{ type: ROUTE_EXAMPLE_TABS }}>Tabbed example</Link>
               </Grid>*/}
               <Grid item xs={12}>
-                {'home content test1234'.repeat(200)}
+                  <MediaProcessTabs>{'home content test1234'.repeat(200)}</MediaProcessTabs>
               </Grid>
             </Grid>
           </ContentContainer>

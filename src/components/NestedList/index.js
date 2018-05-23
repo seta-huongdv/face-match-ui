@@ -14,7 +14,9 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 
-const styles = theme => ({
+import styles from './styles.scss'
+
+/*const styles = theme => ({
     root: {
         width: '100%',
         maxWidth: 360,
@@ -23,9 +25,12 @@ const styles = theme => ({
     nested: {
         paddingLeft: theme.spacing.unit * 4,
     },
-});
+});*/
 
 class NestedList extends React.Component {
+    static propTypes = {};
+    static defaultProps = {};
+
     state = { open: true };
 
     handleClick = () => {
@@ -36,7 +41,7 @@ class NestedList extends React.Component {
         const { classes } = this.props;
 
         return (
-            <div className={classes.root}>
+            <div className={styles.root}>
                 <List
                     component="nav"
                     subheader={<ListSubheader component="div">Nested List Items</ListSubheader>}
@@ -62,7 +67,7 @@ class NestedList extends React.Component {
                     </ListItem>
                     <Collapse in={this.state.open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                            <ListItem button className={classes.nested}>
+                            <ListItem button className={styles.nested}>
                                 <ListItemIcon>
                                     <StarBorder />
                                 </ListItemIcon>
