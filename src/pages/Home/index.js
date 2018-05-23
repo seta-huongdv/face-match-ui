@@ -25,10 +25,10 @@ export default class Home extends React.Component {
         >
           <ContentContainer>
             <Grid container>
-              <Grid item xs={6}>
+              {/*<Grid item xs={6}>
                 <Link to={{ type: ROUTE_EXAMPLE_TABS }}>Tabbed example</Link>
-              </Grid>
-              <Grid item xs={6}>
+              </Grid>*/}
+              <Grid item xs={12}>
                 {'home content test1234'.repeat(200)}
               </Grid>
             </Grid>
