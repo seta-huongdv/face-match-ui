@@ -5,7 +5,7 @@ import styles from './styles.scss';
 // import { PropTypes } from 'helpers/react';
 // const {} = PropTypes;
 
-export class SideBar extends React.Component {
+export default class SideBar extends React.Component {
   static propTypes = {};
   static defaultProps = {};
 
@@ -16,7 +16,9 @@ export class SideBar extends React.Component {
         style={{
           top: appBarHeight + topBarHeight
         }}
-      />
+      >
+        sidebar content
+      </aside>
     );
   }
 }

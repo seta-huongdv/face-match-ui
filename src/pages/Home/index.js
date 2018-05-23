@@ -1,16 +1,40 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-// import {  } from 'prop-types';
-class Home extends React.Component {
-    render() {
-        return (
-            <React.Fragment>
-                <Link to='/home'>Home</Link>
-                <Link to='/details'>details</Link>
-                <h1>HomePage</h1>
+import React, { Fragment } from 'react';
+import Grid from '@material-ui/core/Grid';
+import Link from 'redux-first-router-link';
 
-            </React.Fragment>
-        );
-    }
+import { ROUTE_EXAMPLE_TABS } from 'state/modules/routing';
+import AppContainer from 'components/AppContainer';
+import AppBar from 'components/AppBar';
+import TopBar from 'components/TopBar';
+import SideBar from 'components/SideBar';
+import ContentContainer from 'components/ContentContainer';
+
+export default class Home extends React.Component {
+  static propTypes = {};
+
+  render() {
+    return (
+      <Fragment>
+        <SideBar />
+        <AppBar />
+        <TopBar />
+        <AppContainer
+          appBarOffset
+          topBarOffset
+          sideBarOffset
+        >
+          <ContentContainer>
+            <Grid container>
+              <Grid item xs={6}>
+                <Link to={{ type: ROUTE_EXAMPLE_TABS }}>Tabbed example</Link>
+              </Grid>
+              <Grid item xs={6}>
+                {'home content test1234'.repeat(200)}
+              </Grid>
+            </Grid>
+          </ContentContainer>
+        </AppContainer>
+      </Fragment>
+    );
+  }
 }
-export {Home};
