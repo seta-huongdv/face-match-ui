@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import styles from './styles.scss'
 import MediaCard from "../MediaCard";
@@ -39,7 +40,7 @@ class MediaProcessTabs extends React.Component {
 
         return (
             <div className={styles.root}>
-                <AppBar position="static">
+                <AppBar position="static" color="default">
                     <Tabs value={value}
                           indicatorColor="primary"
                           onChange={this.handleChange}>
@@ -49,7 +50,21 @@ class MediaProcessTabs extends React.Component {
                         <Tab label="Notes" />
                     </Tabs>
                 </AppBar>
-                {value === 0 && <TabContainer><MediaCard/></TabContainer>}
+                {value === 0 && <TabContainer>
+                  <Grid container spacing={24}>
+                    <Grid item xs={6} sm={3}>
+                        <MediaCard/>
+                    </Grid>
+                    <Grid item xs={6} sm={3}>
+                      <MediaCard/>
+                    </Grid>
+                    <Grid item xs={6} sm={3}>
+                      <MediaCard/>
+                    </Grid>
+                    <Grid item xs={6} sm={3}>
+                      <MediaCard/>
+                    </Grid>
+                  </Grid></TabContainer>}
                 {value === 1 && <TabContainer>Tab 2</TabContainer>}
                 {value === 2 && <TabContainer>Item Three</TabContainer>}
                 {value === 3 && <TabContainer>Item Three</TabContainer>}

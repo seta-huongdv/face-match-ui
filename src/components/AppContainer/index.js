@@ -1,13 +1,10 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import { AppContainer as LibAppContainer } from 'veritone-react-common';
-import sideBarStyles from 'components/SideBar/styles.scss';
+import styles from './styles.scss';
 
 const AppContainer = ({ sideBarOffset, ...props }) => (
-  <LibAppContainer
-    {...props}
-    leftOffset={sideBarOffset ? Number(sideBarStyles.sidebarwidth) : 0}
-  />
+  <LibAppContainer className={styles.appContainer} {...props} />
 );
 AppContainer.propTypes = {
   sideBarOffset: bool

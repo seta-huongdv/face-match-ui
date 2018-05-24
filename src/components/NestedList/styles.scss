@@ -1,8 +1,9 @@
-.root {
-  width: 100%;
-  max-width: 360px;
-  background-color: red;
+.item{
+  border-bottom: 1px solid #ccc;
 }
-.nested {
-  padding-left: 1020px;
+.item:last-child{
+  border: none;
+}
+.text{
+  padding-left: 0;
 }

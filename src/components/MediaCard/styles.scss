@@ -1,7 +1,25 @@
-.card {
-  max-width: 345px;
+
+.card{
+  position: relative;
 }
 .media {
   height: 0;
   padding-top: 56.25%;
+}
+.cardHeader{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.cardHeaderBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
 }

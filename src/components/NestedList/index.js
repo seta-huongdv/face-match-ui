@@ -7,9 +7,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+
+
+import PersonIcon from '@material-ui/icons/Person';
+import FolderIcon from '@material-ui/icons/Folder';
+
+
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
@@ -44,32 +47,33 @@ class NestedList extends React.Component {
             <div className={styles.root}>
                 <List
                     component="nav"
-                    subheader={<ListSubheader component="div">Nested List Items</ListSubheader>}
                 >
-                    <ListItem button>
+                    <ListItem  button >
                         <ListItemIcon>
-                            <SendIcon />
+                            <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText inset primary="Sent mail" />
+                        <ListItemText inset primary="Active Case" />
                     </ListItem>
-                    <ListItem button>
+
+                    <ListItem  button>
                         <ListItemIcon>
-                            <DraftsIcon />
+                          <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText inset primary="Drafts" />
+                        <ListItemText inset primary="Closed Case" />
                     </ListItem>
+
                     <ListItem button onClick={this.handleClick}>
                         <ListItemIcon>
-                            <InboxIcon />
+                          <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText inset primary="Inbox" />
+                        <ListItemText inset primary="Archived Case" />
                         {this.state.open ? <ExpandLess /> : <ExpandMore />}
                     </ListItem>
                     <Collapse in={this.state.open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                             <ListItem button className={styles.nested}>
                                 <ListItemIcon>
-                                    <StarBorder />
+                                    <FolderIcon />
                                 </ListItemIcon>
                                 <ListItemText inset primary="Starred" />
                             </ListItem>

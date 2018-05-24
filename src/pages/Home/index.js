@@ -5,7 +5,7 @@ import Link from 'redux-first-router-link';
 import { ROUTE_EXAMPLE_TABS } from 'state/modules/routing';
 import AppContainer from 'components/AppContainer';
 import AppBar from 'components/AppBar';
-import TopBar from 'components/TopBar';
+import TopBarContainer from 'components/TopBarContainer';
 import SideBar from 'components/SideBar';//MediaProcessTabs
 import MediaProcessTabs from 'components/MediaProcessTabs';//MediaProcessTabs
 import ContentContainer from 'components/ContentContainer';
@@ -16,21 +16,14 @@ export default class Home extends React.Component {
   render() {
     return (
       <Fragment>
-        <SideBar />
         <AppBar />
-        <TopBar />
-        <AppContainer
-          appBarOffset
-          topBarOffset
-          sideBarOffset
-        >
-          <ContentContainer>
+        <AppContainer>
+          <TopBarContainer/>
+          <SideBar />
+          <ContentContainer sideBarOffset>
             <Grid container>
-              {/*<Grid item xs={6}>
-                <Link to={{ type: ROUTE_EXAMPLE_TABS }}>Tabbed example</Link>
-              </Grid>*/}
               <Grid item xs={12}>
-                  <MediaProcessTabs>{'home content test1234'.repeat(200)}</MediaProcessTabs>
+                <MediaProcessTabs>{'home content test1234'.repeat(200)}</MediaProcessTabs>
               </Grid>
             </Grid>
           </ContentContainer>
