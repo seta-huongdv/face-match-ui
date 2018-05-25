@@ -41,41 +41,37 @@ class NestedList extends React.Component {
     };
 
     render() {
-        const { classes } = this.props;
-
         return (
             <div className={styles.root}>
-                <List
-                    component="nav"
-                >
-                    <ListItem  button >
+                <List component="nav" className={styles.sideBarNav}>
+                    <ListItem button className={styles.nextedItem}>
+                        <ExpandMore />
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText inset primary="Active Case" />
+                        <ListItemText className={styles.nestedText} inset primary="Active Case" />
                     </ListItem>
-
-                    <ListItem  button>
+                    <ListItem button className={styles.nextedItem}>
+                        <ExpandMore />
                         <ListItemIcon>
-                          <PersonIcon />
+                            <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText inset primary="Closed Case" />
+                        <ListItemText className={styles.nestedText} inset primary="Closed Case" />
                     </ListItem>
-
-                    <ListItem button onClick={this.handleClick}>
-                        <ListItemIcon>
-                          <PersonIcon />
-                        </ListItemIcon>
-                        <ListItemText inset primary="Archived Case" />
+                    <ListItem button onClick={this.handleClick} className={styles.nextedItem}>
                         {this.state.open ? <ExpandLess /> : <ExpandMore />}
+                        <ListItemIcon>
+                            <PersonIcon />
+                        </ListItemIcon>
+                        <ListItemText className={styles.nestedText} inset primary="Archived Case" />
                     </ListItem>
                     <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                            <ListItem button className={styles.nested}>
+                        <List component="div" className={styles.nextedItemChildWrap}>
+                            <ListItem button  className={styles.nextedItemChild}>
                                 <ListItemIcon>
-                                    <FolderIcon />
+                                    <FolderIcon/>
                                 </ListItemIcon>
-                                <ListItemText inset primary="Starred" />
+                                <ListItemText className={styles.nestedText} inset  primary="Starred" />
                             </ListItem>
                         </List>
                     </Collapse>

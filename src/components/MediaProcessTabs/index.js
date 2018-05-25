@@ -19,12 +19,6 @@ function TabContainer(props) {
 TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
-/*const styles = theme => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-    },
-});*/
 
 class MediaProcessTabs extends React.Component {
     state = {
@@ -40,34 +34,40 @@ class MediaProcessTabs extends React.Component {
 
         return (
             <div className={styles.root}>
-                <AppBar position="static" color="default">
-                    <Tabs value={value}
-                          indicatorColor="primary"
-                          onChange={this.handleChange}>
-                        <Tab label="Media" />
-                        <Tab label="Processed" />
-                        <Tab label="Suspects" />
-                        <Tab label="Notes" />
-                    </Tabs>
-                </AppBar>
-                {value === 0 && <TabContainer>
-                  <Grid container spacing={24}>
-                    <Grid item xs={6} sm={3}>
-                        <MediaCard/>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <AppBar position="static" color="default">
+                            <Tabs value={value}
+                                  className={styles.tabNav}
+                                  indicatorColor="primary"
+                                  onChange={this.handleChange}>
+                                <Tab label="Media" className={styles.tabItem}/>
+                                <Tab label="Processed" className={styles.tabItem}/>
+                                <Tab label="Suspects" className={styles.tabItem}/>
+                                <Tab label="Notes" className={styles.tabItem}/>
+                            </Tabs>
+                        </AppBar>
+                    { value === 0 &&
+                        <TabContainer>
+                            <Grid container spacing={24}>
+                                <Grid item xs={6} sm={3}>
+                                    <MediaCard/>
+                                </Grid>
+                              <Grid item xs={6} sm={3}>
+                                <MediaCard/>
+                              </Grid>
+                              <Grid item xs={6} sm={3}>
+                                <MediaCard/>
+                              </Grid>
+                            </Grid>
+                        </TabContainer>
+                      }
+                      {value === 1 && <TabContainer>Tab 2</TabContainer>}
+                      {value === 2 && <TabContainer>Item Three</TabContainer>}
+                      {value === 3 && <TabContainer>Item Three</TabContainer>}
                     </Grid>
-                    <Grid item xs={6} sm={3}>
-                      <MediaCard/>
-                    </Grid>
-                    <Grid item xs={6} sm={3}>
-                      <MediaCard/>
-                    </Grid>
-                    <Grid item xs={6} sm={3}>
-                      <MediaCard/>
-                    </Grid>
-                  </Grid></TabContainer>}
-                {value === 1 && <TabContainer>Tab 2</TabContainer>}
-                {value === 2 && <TabContainer>Item Three</TabContainer>}
-                {value === 3 && <TabContainer>Item Three</TabContainer>}
+                </Grid>
+
             </div>
         );
     }

@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import VideocamIcon from '@material-ui/icons/Videocam';
 import styles from './styles.scss';
 
 /*const styles = {
@@ -40,13 +41,15 @@ function MediaCard(props) {
                     title="Contemplative Reptile"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
-                        Lizard
+                    <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
+                        128376123.MOV
+                        <IconButton className={styles.mediaIcon}>
+                          <VideocamIcon/>
+                        </IconButton>
                     </Typography>
-                    <Typography component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
+                    <Typography component="p" className={styles.mediaDateLabel}> Date Uploaded: </Typography>
+                    <Typography component="span" className={styles.mediaDateDay}>10/22/2017</Typography>
+                  <Typography component="span" className={styles.mediaDateTime}>10:04 AM</Typography>
                 </CardContent>
             </Card>
         </div>
