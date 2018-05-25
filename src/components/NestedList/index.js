@@ -44,21 +44,21 @@ class NestedList extends React.Component {
         return (
             <div className={styles.root}>
                 <List component="nav" className={styles.sideBarNav}>
-                    <ListItem button className={styles.nextedItem}>
+                    <ListItem button className={styles.nestedItem}>
                         <ExpandMore />
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
                         <ListItemText className={styles.nestedText} inset primary="Active Case" />
                     </ListItem>
-                    <ListItem button className={styles.nextedItem}>
+                    <ListItem button className={styles.nestedItem}>
                         <ExpandMore />
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
                         <ListItemText className={styles.nestedText} inset primary="Closed Case" />
                     </ListItem>
-                    <ListItem button onClick={this.handleClick} className={styles.nextedItem}>
+                    <ListItem button onClick={this.handleClick} className={styles.nestedItem}>
                         {this.state.open ? <ExpandLess /> : <ExpandMore />}
                         <ListItemIcon>
                             <PersonIcon />
@@ -66,9 +66,9 @@ class NestedList extends React.Component {
                         <ListItemText className={styles.nestedText} inset primary="Archived Case" />
                     </ListItem>
                     <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-                        <List component="div" className={styles.nextedItemChildWrap}>
-                            <ListItem button  className={styles.nextedItemChild}>
-                                <ListItemIcon>
+                        <List component="div" className={styles.nestedItemChildWrap}>
+                            <ListItem button  className={styles.nestedItemChild}>
+                                <ListItemIcon  className={styles.nestedIconChild}>
                                     <FolderIcon/>
                                 </ListItemIcon>
                                 <ListItemText className={styles.nestedText} inset  primary="Starred" />

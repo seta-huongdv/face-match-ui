@@ -1,7 +1,7 @@
 .sideBarNav{
   padding: 0;
 }
-.nextedItem{
+.nestedItem{
   border-bottom: 1px solid #e6eaee;
   padding-left: 5px;
 }
@@ -13,16 +13,19 @@
   font-weight: 500;
   text-transform: uppercase;
 }
-.nextedItemChildWrap{
+.nestedItemChildWrap{
   padding: 0;
 }
-.nextedItemChild{
-  padding-left: 30px;
+.nestedItemChild{
+  padding-left: 26px;
   border-left: 3px solid transparent;
 }
-.nextedItemChild:hover,
-.nextedItemChild:active{
+.nestedItemChild:hover,
+.nestedItemChild:active{
   border-left: 3px solid #72818b;
+}
+.nestedIconChild{
+  color: #f0c56a;
 }
 .nested{
   margin-left: 20px;
