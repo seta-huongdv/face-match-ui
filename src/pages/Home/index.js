@@ -5,7 +5,6 @@ import Link from 'redux-first-router-link';
 import { ROUTE_EXAMPLE_TABS } from 'state/modules/routing';
 import AppContainer from 'components/AppContainer';
 import AppBar from 'components/AppBar';
-import TopBarContainer from 'components/TopBarContainer';
 import TopBar from 'components/TopBar';
 import SideBar from 'components/SideBar';//MediaProcessTabs
 import InfoCase from 'components/InfoCase';//MediaProcessTabs
@@ -20,7 +19,6 @@ export default class Home extends React.Component {
       <Fragment>
         <AppBar />
         <AppContainer>
-          <TopBarContainer/>
           <TopBar/>
           <SideBar />
           <ContentContainer>
