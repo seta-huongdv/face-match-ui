@@ -27,9 +27,7 @@ export default class Overview extends React.Component {
           <ContentContainer>
              <h1>Overview</h1>
               <Link to={{type: ROUTE_HOME}}>Home</Link>
-              <Link to={{type:ROUTE_EXAMPLE_TABS}}>Home</Link>
-              <Link to={{type:ROUTE_OVERVIEW}}>Overview</Link>
-              <Link to={{type:ROUTE_CASE_DETAILS}}>Details</Link>
+              <Link to={{type: ROUTE_CASE_DETAILS}}>Details</Link>
           </ContentContainer>
         </AppContainer>
       </Fragment>
