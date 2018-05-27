@@ -1,6 +1,8 @@
 import { NOT_FOUND } from 'redux-first-router';
 import {
   ROUTE_AUTH,
+  ROUTE_OVERVIEW,
+  ROUTE_CASE_DETAILS,
   ROUTE_HOME,
   ROUTE_FORBIDDEN,
   ROUTE_EXAMPLE_TAKEOVER,
@@ -17,10 +19,20 @@ export default {
     saga: loadAuthPage,
     requiresAuth: false
   },*/
+  [ROUTE_OVERVIEW]: {
+      path: '/overview',
+      component: 'Overview',
+      requiresAuth: false
+  },
+  [ROUTE_CASE_DETAILS]: {
+      path: '/case-details',
+      component: 'CaseDetails',
+      requiresAuth: false
+  },
   [ROUTE_HOME]: {
     path: '/',
     component: 'Home',
-    requiresAuth: true
+    requiresAuth: false
   },
   [ROUTE_EXAMPLE_TAKEOVER]: {
     // todo: takeover modals.
@@ -35,7 +47,7 @@ export default {
     path: '/example-takeover',
     modalOver: ROUTE_HOME,
     component: 'ExampleTakeoverModal',
-    requiresAuth: true
+    requiresAuth: false
   },
   /*[ROUTE_EXAMPLE_TABS]: {
     path: '/tabs/:tab?',
