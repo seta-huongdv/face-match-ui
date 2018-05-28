@@ -17,15 +17,16 @@ export default class TopBar extends React.Component {
                       <Button variant="raised" color="primary">New Case</Button>
                   </div>
               </div>
-              <LibTopBar appBarOffset
-                         sideBarOffset
-                         leftOffset={240}
-                         leftText="Newport Insland Theft"
-                         rightIconButtons={[
-                             <IconButton key="1">
-                                 <InfoIcon/>
-                             </IconButton>,
-                         ]}
+              <LibTopBar
+                       appBarOffset
+                       sideBarOffset
+                       leftOffset={240}
+                       leftText="Newport Insland Theft"
+                       rightIconButtons={[
+                           <IconButton key="1">
+                               <InfoIcon/>
+                           </IconButton>,
+                       ]}
               />
           </React.Fragment>
       );

@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
+
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import Link from 'redux-first-router-link';
 import {
     ROUTE_OVERVIEW,
@@ -10,27 +12,20 @@ import {
 import AppContainer from 'components/AppContainer';
 import AppBar from 'components/AppBar';
 import TopBar from 'components/TopBar';
-import SideBar from 'components/SideBar';//MediaProcessTabs
-import InfoCase from 'components/InfoCase';//MediaProcessTabs
-import MediaProcessTabs from 'components/MediaProcessTabs';//MediaProcessTabs
-import ContentContainer from 'components/ContentContainer';
+import NewCase from 'components/NewCase';
+
 
 export default class Overview extends React.Component {
   static propTypes = {};
-
   render() {
-    return (
-      <Fragment>
-        <AppBar />
-        <AppContainer>
-          <TopBar/>
-          <ContentContainer>
-             <h1>Overview</h1>
-              <Link to={{type: ROUTE_HOME}}>Home</Link>
-              <Link to={{type: ROUTE_CASE_DETAILS}}>Details</Link>
-          </ContentContainer>
-        </AppContainer>
-      </Fragment>
-    );
-  }
+      return (
+          <Fragment>
+              <AppBar />
+              <AppContainer>
+                  <TopBar/>
+                  <NewCase />
+              </AppContainer>
+          </Fragment>
+      );
+    }
 }
