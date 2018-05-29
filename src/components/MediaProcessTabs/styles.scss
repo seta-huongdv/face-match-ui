@@ -1,6 +1,16 @@
 .root {
   flex-grow: 1;
 }
+.appBar{
+  margin-top: 30px;
+  box-shadow: none;
+  background: #f2f2f2;
+}
+.tabBarWrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .tabNav{
   background: #f2f2f2;
 }
@@ -10,10 +20,44 @@
 .tabItem{
   height: 55px;
 }
-.tabItemText{
-
-  font-size: 1rem;
+.tabItem span{
+  font-size: 16px;
+  color: #2B485C;
   text-transform: none;
   font-weight: 300;
   font-style: normal;
+}
+.tabBarIconWrap{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.tabBarIcon{
+  width: 70px;
+  height: 55px;
+  text-align: center;
+  border-left: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #72818B;
+}
+.tabBarSelect{
+  width: 175px;
+  height: 55px;
+  text-align: center;
+  border-left: 1px solid #fff;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #72818B;
+  padding: 0  15px;
+}
+.tabBarSelect > div{
+  display: flex;
+}
+.tabBarSelect .MuiInput-underline-325:after{
+
+display: none
 }

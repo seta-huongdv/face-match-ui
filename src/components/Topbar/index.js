@@ -38,7 +38,7 @@ export default class TopBar extends React.Component {
               <Paper
                   style={{
                     top: 60,
-                    height: 60,
+                    height: 59,
                     background: '#fafafa'
                   }}
                   className={styles.topBar}

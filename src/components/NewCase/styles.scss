@@ -43,8 +43,19 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-
+.modalFooter{
+  text-align: right;
+}
 form label{
   font-size: 12px;
   font-weight: 300;
+}
+.step1{
+  display: none;
+}
+.step2{
+  display: block;
+}
+.modalFooterButton{
+  margin: 8px;
 }

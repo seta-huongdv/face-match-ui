@@ -12,7 +12,7 @@ export default class SideBar extends React.Component {
 
   render() {
       return (
-          <aside className={styles.container} style={{ top: appBarHeight + topBarHeight + 5, }} >
+          <aside className={styles.container} style={{ top: appBarHeight + topBarHeight + 19 }} >
               <NestedList />
           </aside>
       );

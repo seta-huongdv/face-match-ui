@@ -1,9 +1,25 @@
+.infoCaseWrap{
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
 .infoCaseItem{
   padding: 15px;
 }
+.infoCaseItem:nth-child(2),
+.infoCaseItem:nth-child(3),
+.infoCaseItem:nth-child(4),
+.infoCaseItem:nth-child(5){
+  flex: 1 1 auto;
+}
 .infoCaseLabel{
   font-weight: 300;
+  opacity: 0.7;
+  color: #000;
 }
 .infoCaseContent{
-  font-weight: 500;
+  font-weight: 300;
+  color: #000;
 }

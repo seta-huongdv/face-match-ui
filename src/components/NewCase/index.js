@@ -32,141 +32,159 @@ export default class NewCase extends React.Component{
 
               <Modal open={this.state.open} onClose={this.handleClose} >
                   <div className={styles.modalNewCase}>
-                      <div className={styles.modalHeading}>
-                          <h2 className={styles.modalHeadingTitle}>Create new Case</h2>
-                          <Button className={styles.modalBtnClose} onClick={this.handleClose} >x</Button>
-                      </div>
-                      <div className={styles.modalBody}>
-                          <form>
-                              <Grid container spacing={24}>
-                                  <Grid item xs={3}>
-                                      <img src="../../img/imgCreateCase.png" alt=""/>
-                                  </Grid>
-                                  <Grid item xs={9}>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={6}>
-                                              <TextField
-                                                fullWidth
-                                                  id="name"
-                                                  label="Name"
-                                                  margin="normal"
-                                              />
-                                          </Grid>
-                                          <Grid item xs={6}>
-                                              <Grid container spacing={24}>
-                                                  <Grid item xs={6}>
+                      <div className={styles.step1}>
+                          <div className={styles.modalHeading}>
+                              <h2 className={styles.modalHeadingTitle}>Create new Case</h2>
+                              <Button className={styles.modalBtnClose} onClick={this.handleClose} >x</Button>
+                          </div>
+                          <div className={styles.modalBody}>
+                              <form>
+                                  <Grid container spacing={24}>
+                                      <Grid item xs={3}>
+                                          <img src="../../img/imgCreateCase.png" alt=""/>
+                                      </Grid>
+                                      <Grid item xs={9}>
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={6}>
+                                                  <TextField
+                                                       fullWidth
+                                                      id="name"
+                                                      label="Name"
+                                                      margin="normal"
+                                                  />
+                                              </Grid>
+                                              <Grid item xs={6}>
+                                                  <Grid container spacing={24}>
+                                                      <Grid item xs={6}>
 
-                                                      <TextField
-                                                        fullWidth
-                                                        id="name"
-                                                        label="Name"
-                                                        margin="normal"
-                                                      />
-                                                  </Grid>
-                                                  <Grid item xs={6}>
-                                                      <TextField
-                                                        fullWidth
-                                                        id="name"
-                                                        label="Name"
-                                                        margin="normal"
-                                                      />
+                                                          <TextField
+                                                            fullWidth
+                                                            id="name"
+                                                            label="Name"
+                                                            margin="normal"
+                                                          />
+                                                      </Grid>
+                                                      <Grid item xs={6}>
+                                                          <TextField
+                                                            fullWidth
+                                                            id="name"
+                                                            label="Name"
+                                                            margin="normal"
+                                                          />
+                                                      </Grid>
                                                   </Grid>
                                               </Grid>
                                           </Grid>
-                                      </Grid>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={12}>
-                                              <TextField
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={12}>
+                                                  <TextField
+                                                      fullWidth
+                                                      id="caseName"
+                                                      label="Case Name"
+                                                      margin="normal"
+                                                  />
+                                              </Grid>
+                                          </Grid>
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={12}>
+                                                <TextField
                                                   fullWidth
-                                                  id="caseName"
-                                                  label="Case Name"
+                                                  id="name"
+                                                  label="Case Description"
                                                   margin="normal"
-                                              />
+                                                />
+                                              </Grid>
                                           </Grid>
-                                      </Grid>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={12}>
-                                            <TextField
-                                              fullWidth
-                                              id="name"
-                                              label="Case Description"
-                                              margin="normal"
-                                            />
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={6}>
+                                                  <TextField
+                                                    fullWidth
+                                                    id="agency"
+                                                    label="Agency or Department"
+                                                    margin="normal"
+                                                  />
+                                              </Grid>
+                                              <Grid item xs={6}>
+                                                  <TextField
+                                                    fullWidth
+                                                    id="officer"
+                                                    label="Officer(s)"
+                                                    margin="normal"
+                                                  />
+                                              </Grid>
                                           </Grid>
-                                      </Grid>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={6}>
-                                              <TextField
-                                                fullWidth
-                                                id="agency"
-                                                label="Agency or Department"
-                                                margin="normal"
-                                              />
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={6}>
+                                                  <TextField
+                                                    fullWidth
+                                                    id="address"
+                                                    label="Address"
+                                                    margin="normal"
+                                                  />
+                                              </Grid>
                                           </Grid>
-                                          <Grid item xs={6}>
-                                              <TextField
-                                                fullWidth
-                                                id="officer"
-                                                label="Officer(s)"
-                                                margin="normal"
-                                              />
-                                          </Grid>
-                                      </Grid>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={6}>
-                                              <TextField
-                                                fullWidth
-                                                id="address"
-                                                label="Address"
-                                                margin="normal"
-                                              />
-                                          </Grid>
-                                      </Grid>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={6}>
-                                            <TextField
-                                              fullWidth
-                                              id="city"
-                                              label="City"
-                                              margin="normal"
-                                            />
-                                          </Grid>
-                                          <Grid item xs={6}>
-                                              <Grid container spacing={24}>
-                                                  <Grid item xs={6}>
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={6}>
+                                                <TextField
+                                                  fullWidth
+                                                  id="city"
+                                                  label="City"
+                                                  margin="normal"
+                                                />
+                                              </Grid>
+                                              <Grid item xs={6}>
+                                                  <Grid container spacing={24}>
+                                                      <Grid item xs={6}>
 
-                                                      <TextField
-                                                          fullWidth
-                                                          id="state"
-                                                          label="State"
-                                                          margin="normal"
+                                                          <TextField
+                                                              fullWidth
+                                                              id="state"
+                                                              label="State"
+                                                              margin="normal"
 
-                                                      />
-                                                  </Grid>
-                                                  <Grid item xs={6}>
-                                                      <TextField
-                                                        fullWidth
-                                                        id="name"
-                                                        label="Zipcode"
-                                                        margin="normal"
-                                                      />
+                                                          />
+                                                      </Grid>
+                                                      <Grid item xs={6}>
+                                                          <TextField
+                                                            fullWidth
+                                                            id="name"
+                                                            label="Zipcode"
+                                                            margin="normal"
+                                                          />
+                                                      </Grid>
                                                   </Grid>
                                               </Grid>
                                           </Grid>
-                                      </Grid>
-                                      <Grid container spacing={24}>
-                                          <Grid item xs={12}>
-                                              <TextField
-                                                fullWidth
-                                                id="tags"
-                                                label="Tags"
-                                                margin="normal"
-                                              />
+                                          <Grid container spacing={24}>
+                                              <Grid item xs={12}>
+                                                  <TextField
+                                                    fullWidth
+                                                    id="tags"
+                                                    label="Tags"
+                                                    margin="normal"
+                                                  />
+                                              </Grid>
                                           </Grid>
                                       </Grid>
                                   </Grid>
-                              </Grid>
-                        </form>
+                            </form>
+                          </div>
+                          <div className={styles.modalFooter}>
+                              <Button variant="raised" color="primary" onClick={this.handleOpen}>Create New</Button>
+                          </div>
+                      </div>
+                      <div className={styles.step2}>
+                          <div className={styles.modalHeading}>
+                              <h2 className={styles.modalHeadingTitle}>Upload Media</h2>
+                              <Button className={styles.modalBtnClose} onClick={this.handleClose} >x</Button>
+                          </div>
+                          <div className={styles.modalBody}>
+                              <p>Now add video or image files to this case or skip this step and add media at a later time.</p>
+                          </div>
+                          <div className={styles.modalFooter}>
+                            <Button variant="outlined" color="default" className={styles.modalFooterButton}>Skip</Button>
+                            <Button variant="raised" color="primary" className={styles.modalFooterButton}>Upload</Button>
+                          </div>
                       </div>
                   </div>
               </Modal>
