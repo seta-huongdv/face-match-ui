@@ -8,7 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import MediaCard from "../MediaCard";
-import Notes from "../Notes";
+import NotesList from "../NotesList";
+import ProcessedList from "../ProcessedList";
+import SuspectsList from "../SuspectsList";
 
 
 import ChatIcon from '@material-ui/icons/Chat';
@@ -81,19 +83,53 @@ class MediaProcessTabs extends React.Component {
                             <Grid item xs={6} sm={3}>
                                 <MediaCard/>
                             </Grid>
-                          <Grid item xs={6} sm={3}>
-                            <MediaCard/>
-                          </Grid>
-                          <Grid item xs={6} sm={3}>
-                            <MediaCard/>
-                          </Grid>
+                            <Grid item xs={6} sm={3}>
+                                <MediaCard/>
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                                <MediaCard/>
+                            </Grid>
                         </Grid>
                     </TabContainer>
                 }
-                {value === 1 && <TabContainer>Tab 2</TabContainer>}
-                {value === 2 && <TabContainer>Item Three</TabContainer>}
+                {value === 1 && <TabContainer>
+                  <Grid container spacing={24}>
+                    <Grid item xs={6} sm={3}>
+                      <ProcessedList />
+                    </Grid>
+                    <Grid item xs={6} sm={3}>
+                      <ProcessedList />
+                    </Grid>
+                    <Grid item xs={6} sm={3}>
+                      <ProcessedList />
+                    </Grid>
+                  </Grid>
+
+                </TabContainer>}
+                {value === 2 && <TabContainer>
+                  <Grid container spacing={24}>
+                    <Grid item xs={6} sm={2}>
+                      <SuspectsList />
+                    </Grid>
+                    <Grid item xs={6} sm={2}>
+                      <SuspectsList />
+                    </Grid>
+                    <Grid item xs={6} sm={2}>
+                      <SuspectsList />
+                    </Grid>
+                    <Grid item xs={6} sm={2}>
+                      <SuspectsList />
+                    </Grid>
+                    <Grid item xs={6} sm={2}>
+                      <SuspectsList />
+                    </Grid>
+                    <Grid item xs={6} sm={2}>
+                      <SuspectsList />
+                    </Grid>
+                  </Grid>
+                </TabContainer>}
                 {value === 3 && <TabContainer>
-                  <Notes></Notes>
+                    <NotesList></NotesList>
                 </TabContainer>}
 
             </div>

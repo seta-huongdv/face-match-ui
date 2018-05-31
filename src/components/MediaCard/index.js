@@ -27,14 +27,18 @@ import styles from './styles.scss';
 class MediaCard extends React.Component{
   state = {
     checked: false,
+    cardActive: 'active'
   };
 
   handleChange = name => event => {
-    this.setState({ [name]: event.target.checked });
+    this.setState(
+        { [name]: event.target.checked}
+    );
   };
     render(){
       return (
         <div>
+
           <Card className={styles.card}>
             <Checkbox
               className={styles.mediaCheckbox}

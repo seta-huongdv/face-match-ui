@@ -83,21 +83,15 @@ class EnhancedTableHead extends React.Component {
           }, this)}
           <TableCell>
               <div>
-                <Tooltip title="Delete">
                   <IconButton aria-label="Delete" disabled={disabled}>
                     <ReplyIcon/>
                   </IconButton>
-                </Tooltip>
-                <Tooltip title="Edit">
                   <IconButton aria-label="Delete" disabled={disabled}>
                     <CreateIcon/>
                   </IconButton>
-                </Tooltip>
-                <Tooltip title="Delete">
                   <IconButton aria-label="Delete" disabled={disabled}>
                     <DeleteIcon/>
                   </IconButton>
-                </Tooltip>
               </div>
 
 
@@ -120,7 +114,8 @@ EnhancedTableHead.propTypes = {
 const styles = theme => ({
   root: {
     width: '100%',
-    marginTop: theme.spacing.unit * 3,
+    boxShadow: 'none',
+    background: 'none'
   },
   table: {
     minWidth: 1020,
