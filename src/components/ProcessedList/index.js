@@ -6,23 +6,14 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import VideocamIcon from '@material-ui/icons/Videocam';
-import styles from './../MediaCard/styles.scss';
-
-/*const styles = {
-    card: {
-        maxWidth: 345,
-    },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
-    },
-};*/
+import styles from './styles.scss';
 
 class ProcessedList extends React.Component{
   state = {
@@ -32,6 +23,14 @@ class ProcessedList extends React.Component{
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked });
   };
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
   render(){
     return (
       <div>
@@ -54,8 +53,10 @@ class ProcessedList extends React.Component{
           <CardMedia
             className={styles.media}
             image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile">
-            <Button href="#" className={styles.viewMatches}>View Matches</Button>
+            title="Contemplative Reptile"
+
+          >
+            <Button href="#" className={styles.viewMatches}  onClick={this.handleOpen}>View Matches</Button>
           </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
@@ -73,15 +74,25 @@ class ProcessedList extends React.Component{
             <Typography component="span" className={styles.mediaHours}>10:04</Typography>
           </CardContent>
         </Card>
-
+        <Modal
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={this.state.open}
+          onClose={this.handleClose}
+        >
+          <div className={styles.modalNewCase}>
+            <Typography variant="title" id="modal-title">
+              Processed Details: 89321312.MOV
+            </Typography>
+            <Typography variant="subheading" id="simple-modal-description">
+              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            </Typography>
+          </div>
+        </Modal>
       </div>
     );
   }
 
 }
 
-ProcessedList.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ProcessedList);
+export default ProcessedList;

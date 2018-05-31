@@ -1,0 +1,144 @@
+
+.card{
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.card:hover{
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(0,0,0,0.99);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(0,0,0,0.99);
+  box-shadow: 0px 0px 0px 3px rgba(0,0,0,0.99);
+}
+.card:hover .media:before{
+  content: '';
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  top: 0;left: 0;right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+.card:hover .viewMatches{
+  opacity: 1;
+}
+.media {
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+.cardHeader{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.cardHeaderBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+}
+.mediaIcon{
+  color: #26a69a;
+  width: 30px;height: 30px;
+  margin: 0px 0 3px 5px;
+}
+.mediaName{
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+.mediaDateLabel{
+  font-weight: 300;
+}
+.mediaDateDay{
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: 200;
+}
+.mediaDateTime{
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: 200;
+}
+.mediaHours{
+  position: absolute;
+  top: 180px;right: 10px;
+  background: #000;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  padding:2px 6px;;
+}
+.mediaCheckbox{
+  position: absolute;
+  top: 10px;left: 10px;
+  z-index: 3;
+}
+.mediaCheckbox path{
+  fill: #fff;
+  fill-opacity:1;
+}
+.mediaName{
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 15px;
+}
+.viewMatches{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  z-index: 3;
+  border: 2px solid #d0d0d0;
+  color: #d0d0d0;
+}
+
+
+
+
+.modalHeading{
+  margin-bottom: 15px;
+}
+.modalNewCase{
+  top: 50%;left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 20px 30px;
+  position: absolute;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  outline: none;
+}
+.modalHeadingTitle{
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+.modalBtnClose{
+  position: absolute;
+  top: 19px;
+  right: 12px;
+  font-size: 16px;
+  color: #7b7b7b;
+  background: none;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  min-width: 30px;
+  min-height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.modalFooter{
+  text-align: right;
+}
