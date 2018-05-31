@@ -2,8 +2,10 @@
   padding: 0;
 }
 .nestedItem{
-  border-bottom: 1px solid #e6eaee;
   padding-left: 5px;
+}
+.nestedItem:focus{
+  background: #fafafa;
 }
 .nestedText{
   padding-left: 0;

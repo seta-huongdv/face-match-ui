@@ -7,6 +7,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
+import Divider from '@material-ui/core/Divider';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 import PersonIcon from '@material-ui/icons/Person';
@@ -34,13 +37,16 @@ class NestedList extends React.Component {
     static propTypes = {};
     static defaultProps = {};
 
-    state = { open: true };
+    state = {
+      open: false,
+      anchorEl: null
+    };
 
     handleClick = () => {
         this.setState({ open: !this.state.open });
     };
-
-    render() {
+  render() {
+    const { anchorEl } = this.state;
         return (
             <div className={styles.root}>
                 <List component="nav" className={styles.sideBarNav}>
@@ -49,8 +55,11 @@ class NestedList extends React.Component {
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText className={styles.nestedText} inset primary="Active Case" />
+                        <ListItemText className={styles.nestedText}  inset primary="Active Case" />
                     </ListItem>
+                    <Divider />
+
+
                     <ListItem button className={styles.nestedItem}>
                         <ExpandMore />
                         <ListItemIcon>
@@ -58,7 +67,10 @@ class NestedList extends React.Component {
                         </ListItemIcon>
                         <ListItemText className={styles.nestedText} inset primary="Closed Case" />
                     </ListItem>
-                    <ListItem button onClick={this.handleClick} className={styles.nestedItem}>
+                    <Divider />
+
+
+                    <ListItem button onClick={this.handleClick} className={ this.state.open ? styles.nestedItem + ' ' + "active" : styles.nestedItem}>
                         {this.state.open ? <ExpandLess /> : <ExpandMore />}
                         <ListItemIcon>
                             <PersonIcon />

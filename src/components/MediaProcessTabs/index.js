@@ -8,6 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import MediaCard from "../MediaCard";
+import Notes from "../Notes";
+
+
 import ChatIcon from '@material-ui/icons/Chat';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -63,9 +66,9 @@ class MediaProcessTabs extends React.Component {
                                 <FormControl>
                                     <InputLabel htmlFor="age-simple">Sort By All Media</InputLabel>
                                     <Select>
-                                      <MenuItem value={10}>Ten</MenuItem>
-                                      <MenuItem value={20}>Twenty</MenuItem>
-                                      <MenuItem value={30}>Thirty</MenuItem>
+                                        <MenuItem value={10}>Ten</MenuItem>
+                                        <MenuItem value={20}>Twenty</MenuItem>
+                                        <MenuItem value={30}>Thirty</MenuItem>
                                     </Select>
                                 </FormControl>
                             </div>
@@ -89,7 +92,9 @@ class MediaProcessTabs extends React.Component {
                 }
                 {value === 1 && <TabContainer>Tab 2</TabContainer>}
                 {value === 2 && <TabContainer>Item Three</TabContainer>}
-                {value === 3 && <TabContainer>Item Three</TabContainer>}
+                {value === 3 && <TabContainer>
+                  <Notes></Notes>
+                </TabContainer>}
 
             </div>
         );
