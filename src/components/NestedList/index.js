@@ -8,9 +8,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 import PersonIcon from '@material-ui/icons/Person';
 import FolderIcon from '@material-ui/icons/Folder';
@@ -41,7 +42,12 @@ class NestedList extends React.Component {
       open: false,
       anchorEl: null
     };
-
+    handClickMoreMenu = event => {
+      this.setState({ anchorEl: event.currentTarget });
+    };
+    handleMoreMenuClose = () => {
+      this.setState({ anchorEl: null });
+    };
     handleClick = () => {
         this.setState({ open: !this.state.open });
     };
@@ -84,6 +90,17 @@ class NestedList extends React.Component {
                                     <FolderIcon/>
                                 </ListItemIcon>
                                 <ListItemText className={styles.nestedText} inset  primary="Starred" />
+                                <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                              <Menu
+                                id="simple-menu"
+                                anchorEl={anchorEl}
+                                open={Boolean(anchorEl)}
+                                onClose={this.handleMoreMenuClose}
+                              >
+                                <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                                <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                                <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                              </Menu>
                             </ListItem>
                         </List>
                     </Collapse>

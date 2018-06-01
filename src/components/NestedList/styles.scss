@@ -26,9 +26,19 @@
 .nestedItemChild:active{
   border-left: 3px solid #72818b;
 }
+.nestedItemChild:hover .nestedIconMore,
+.nestedItemChild:active .nestedIconMore{
+  opacity: 1;
+}
 .nestedIconChild{
   color: #f0c56a;
 }
 .nested{
   margin-left: 20px;
+}
+.nestedIconMore{
+  opacity: 0;
+  transition: 0.3 ease-in-out;
+  position: relative;
+  z-index: 99
 }
