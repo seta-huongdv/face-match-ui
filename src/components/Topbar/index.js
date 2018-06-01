@@ -56,7 +56,7 @@ export default class TopBar extends React.Component {
                     <span>
                       {/*{this.props.leftText}*/} Title Case
                     </span>
-                    <IconButton onClick={this.toggleDrawer('right', true)} >
+                    <IconButton onClick={this.toggleDrawer('right', true)} className={styles.topBarButton} >
                       <InfoIcon></InfoIcon>
                     </IconButton>
                     <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
