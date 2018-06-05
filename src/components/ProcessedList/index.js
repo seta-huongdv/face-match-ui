@@ -14,6 +14,12 @@ import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import styles from './styles.scss';
+import Link from 'redux-first-router-link';
+
+import {
+    ROUTE_EXAMPLE_TABS,
+    ROUTE_EXAMPLE_TAKEOVER
+} from 'state/modules/routing';
 
 class ProcessedList extends React.Component{
   state = {
@@ -56,7 +62,9 @@ class ProcessedList extends React.Component{
             title="Contemplative Reptile"
 
           >
-            <Button href="#" className={styles.viewMatches}  onClick={this.handleOpen}>View Matches</Button>
+              <Link to={{ type: ROUTE_EXAMPLE_TAKEOVER }}>
+                  <Button href="#" className={styles.viewMatches}  onClick={this.handleOpen}>View Matches</Button>
+              </Link>
           </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
