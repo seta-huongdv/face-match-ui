@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { range } from 'lodash';
 import { string, shape, func } from 'prop-types';
 import { connect } from 'react-redux';
@@ -18,7 +18,23 @@ import GridListTile from '@material-ui/core/GridListTile';
 
 import AppContainer from 'components/AppContainer';
 import ContentContainer from 'components/ContentContainer';
+import ProcessedSidebar from '../../components/ProcessedSidebar';
+import ProcessedContent from '../../components/ProcessedContent';
+import UnknownFaces from '../../components/UnknownFaces';
 import styles from './styles.scss';
+import PropTypes from "prop-types";
+import ProcessedList from "../../components/ProcessedList";
+
+function TabContainer(props) {
+  return (
+    <Typography component="div" style={{ paddingTop: 8 * 3 }}>
+      {props.children}
+    </Typography>
+  );
+}
+TabContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
@@ -38,14 +54,15 @@ export default class ExampleTakeoverModal extends React.Component {
   };
 
   state = {
-    currentTab: 0
+    value: 0,
   };
 
-  handleChangeTab = (e, tabName) => {
-    this.setState({ currentTab: tabName });
+  handleChangeTab = (event, value) => {
+    this.setState({ value });
   };
 
   render() {
+    const { value } = this.state;
     return (
       <Dialog
         fullScreen
@@ -85,31 +102,34 @@ export default class ExampleTakeoverModal extends React.Component {
               root: styles.lowerToolBar
             }}
           >
-            <Tabs
-              indicatorColor="secondary"
-              value={this.state.currentTab}
-              onChange={this.handleChangeTab}
-            >
-              <Tab label="Categories" />
-              <Tab label="Tasks" />
+            <Tabs indicatorColor="secondary"  value={value}  /*value={this.state.currentTab}*/ onChange={this.handleChangeTab} >
+              <Tab label="Matched Faces" />
+              <Tab label="Unknown Faces" />
             </Tabs>
           </Toolbar>
         </AppBar>
-        <AppContainer appBarOffset topBarOffset>
-          <ContentContainer>
-            <Grid container>
-              <Grid item xs={12}>
-                <GridList cellHeight={200} cols={3}>
-                  {range(30).map(i => (
-                    <GridListTile key={i}>
-                      <img src={`https://picsum.photos/200?random&seed=${i}`} />
-                    </GridListTile>
-                  ))}
-                </GridList>
-              </Grid>
-            </Grid>
-          </ContentContainer>
-        </AppContainer>
+        { value === 0 &&
+          <TabContainer>
+            <Fragment>
+              <div className={styles.processedWrapper}>
+                <ProcessedSidebar />
+                <ProcessedContent />
+              </div>
+            </Fragment>
+
+          </TabContainer>
+        }
+        {value === 1 &&
+          <TabContainer>
+            <TabContainer>
+              <div className={styles.processedWrapper}>
+                  <UnknownFaces />
+              </div>
+            </TabContainer>
+
+          </TabContainer>
+        }
+
       </Dialog>
     );
   }

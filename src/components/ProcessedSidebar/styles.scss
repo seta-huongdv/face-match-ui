@@ -1,0 +1,50 @@
+.processedSidebar{
+  width: 240px;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #e8e8e8;
+  overflow-y: auto;
+}
+.navTabs{
+  padding-left: 20px;
+}
+.tabItem{
+  width: 92px;
+  min-width: 92px;
+}
+.thumbnailItem{
+  background: #d8d8d8;
+  border-radius: 10px;
+  width: 200px;height: 183px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.thumbnailItem img{
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.checkboxSize{
+  width: 48px;height: 40px;
+}
+.itemFilter{
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.formGroup{
+  width: 220px;
+}
+.formControlLabel > span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+}
+.itemFilterLabel{
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}

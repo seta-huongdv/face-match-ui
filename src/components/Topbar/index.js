@@ -6,6 +6,7 @@ import {TopBar as LibTopBar} from 'veritone-react-common';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 import InfoIcon from '@material-ui/icons/Info';
+import ClearIcon from '@material-ui/icons/Clear';
 import Paper from '@material-ui/core/Paper';
 import Drawer from '@material-ui/core/Drawer';
 
@@ -60,15 +61,13 @@ export default class TopBar extends React.Component {
                       <InfoIcon></InfoIcon>
                     </IconButton>
                     <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
-                      <div
-                        tabIndex={0}
-                        role="button"
-                        onClick={this.toggleDrawer('right', false)}
-                        onKeyDown={this.toggleDrawer('right', false)}
-                      >
-                      </div>
-                      <div className={styles.caseInfoHeader}>
-                        <h2>Case Information</h2>
+
+                      <div tabIndex={0} role="button" onClick={this.toggleDrawer('right', false)} onKeyDown={this.toggleDrawer('right', false)}></div>
+                        <div className={styles.caseInfoHeader}>
+                          <IconButton onClick={this.toggleDrawer('right', false)} >
+                            <ClearIcon></ClearIcon>
+                          </IconButton>
+                          <h2>Case Information</h2>
                       </div>
                       <div className={styles.caseInfoContent}>
                         <div className={styles.caseInfoHeading}>

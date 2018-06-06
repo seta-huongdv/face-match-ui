@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+
 import CardMedia from '@material-ui/core/CardMedia';
-import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
@@ -39,7 +39,7 @@ class ProcessedList extends React.Component{
 
   render(){
     return (
-      <div>
+      <Fragment>
         <Card className={styles.card}>
           <Checkbox
             className={styles.mediaCheckbox}
@@ -82,22 +82,7 @@ class ProcessedList extends React.Component{
             <Typography component="span" className={styles.mediaHours}>10:04</Typography>
           </CardContent>
         </Card>
-        <Modal
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
-          open={this.state.open}
-          onClose={this.handleClose}
-        >
-          <div className={styles.modalNewCase}>
-            <Typography variant="title" id="modal-title">
-              Processed Details: 89321312.MOV
-            </Typography>
-            <Typography variant="subheading" id="simple-modal-description">
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
-          </div>
-        </Modal>
-      </div>
+      </Fragment>
     );
   }
 

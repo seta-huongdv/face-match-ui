@@ -1,6 +1,7 @@
 .appBar {
   height: 105px;
   min-height: 105px;
+  box-shadow: none;
 
   .upperToolBar {
     height: 60px;
@@ -14,5 +15,11 @@
   .lowerToolBar {
     height: 45px;
     min-height: 45px;
+    padding-left: 0;
+
   }
+}
+.processedWrapper{
+  display: flex;
+  margin-top: 81px;
 }
