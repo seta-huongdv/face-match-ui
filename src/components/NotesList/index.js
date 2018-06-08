@@ -18,9 +18,9 @@ import ReplyIcon from '@material-ui/icons/Reply';
 
 let counter = 0;
 
-function createData(createdDate, notes, createdBy) {
+function createData(createdDate, notes, createdBy, name) {
   counter += 1;
-  return {id: counter, createdDate, notes, createdBy};
+  return {id: counter, createdDate, notes, createdBy, name};
 }
 
 const columnData = [

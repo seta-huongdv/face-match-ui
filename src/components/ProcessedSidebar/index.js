@@ -30,7 +30,7 @@ export default class ProcessedSidebar extends React.Component {
 
     return (
       <div className={styles.processedSidebar}>
-          <Tabs value={value} onChange={this.handleChange} className={styles.navTabs}>
+          <Tabs value={value} onChange={this.handleChange} className={styles.navTabs} indicatorColor="secondary" textColor="secondary">
             <Tab value="one" label="Images" className={styles.tabItem}/>
             <Tab value="two" label="Filter" className={styles.tabItem}/>
           </Tabs>

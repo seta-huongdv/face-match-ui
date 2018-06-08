@@ -13,12 +13,13 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import styles from '../../css/main.css';
 const RenderTextField = ({
-                             input: {value, onChange},
-                             label,
-                             meta: {touched, error},
-                             ...custom
-                         }) => (
+       input: {value, onChange},
+       label,
+       meta: {touched, error},
+       ...custom
+   }) => (
     <div>
         <TextField
             // value={value}
@@ -60,46 +61,59 @@ export default class NoteForm extends React.Component {
                 onClose={this.props.onClose}
                 disableBackdropClick
                 disableEscapeKeyDown
-                maxWidth="md"
+                maxWidth="sm"
             >
                 <form onSubmit={this.props.handleSubmit}>
-                    <DialogTitle>{this.props.noteModel ? 'Edit Note' : 'New Note'}</DialogTitle>
+                    <DialogTitle  className={styles.modalShareTitle}>{this.props.noteModel ? 'Edit Note' : 'New Note'}
+                      <Button className={styles.modalBtnClose} onClick={this.props.onClose} >x</Button>
+                    </DialogTitle>
                     <DialogContent>
                         {/*<DialogContentText>
                             Please provide the following information.
                         </DialogContentText>*/}
                         <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field style={{ fontWeight: 300, marginBottom: 20}}
+                                  fullWidth
                                    name="id"
                                    label="ID"
                                    defaultValue={this.props.noteModel ? this.props.noteModel.id : ''}
                                    component={RenderTextField}
                                    type="text"
-                                   placeholder="ID"
                             />
                         </FormControl>
+                        <FormControl fullWidth>
+                          <Field style={{ fontWeight: 300, marginBottom: 20}}
+                            fullWidth
+                            name="name"
+                            label="Name"
+                            defaultValue={this.props.noteModel ? this.props.noteModel.name : ''}
+                            component={RenderTextField}
+                            type="text"
+                          />
+                        </FormControl>
                        <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field style={{ fontWeight: 300, marginBottom: 20}}
+                                     fullWidth
                                    name="createdDate"
                                    label="Created Date"
                                    defaultValue={this.props.noteModel ? this.props.noteModel.createdDate : ''}
                                    component={RenderTextField}
                                    type="text"
-                                   placeholder="created Date"
                             />
                         </FormControl>
                         <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field style={{ fontWeight: 300}}
+                              fullWidth
                                 name="description"
                                 defaultValue={this.props.noteModel ? this.props.noteModel.description : ''}
                                 label="Note Description"
                                 component={RenderTextField}
-                                type="text"
-                                placeholder="Note Description"
+                                multiline
+                                rows="5"
                             />
                         </FormControl>
                         {this.props.noteModel && <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field
                                    name="createdBy"
                                    label="Created By"
                                    defaultValue={this.props.noteModel.createdBy}
@@ -111,10 +125,11 @@ export default class NoteForm extends React.Component {
 
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={this.props.onClose} color="primary">
+                        <Button onClick={this.props.onClose} variant="raised" color="primary">
                             Cancel
                         </Button>
                         <Button
+                            variant="raised"
                             type="submit"
                             color="primary"
                             disabled={this.props.pristine}

@@ -6,3 +6,40 @@
   align-items: center;
   flex-grow: 1;
 }
+.modalContent{
+  padding: 20px 30px;
+}
+.modalHeading{
+  margin-bottom: 15px;
+}
+
+.modalShareTitle h2{
+  font-size: 20px;
+  font-weight: 300;
+  flex: 0 0 auto;
+  margin: 0;
+}
+.modalBtnClose{
+  position: absolute;
+  top: 19px;
+  right: 12px;
+  font-size: 16px;
+  color: #7b7b7b;
+  background: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  min-width: 30px;
+  min-height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+}
+
+.modalWarning{
+  font-size: 15px;
+  line-height: 24px;
+  font-style: italic;
+  color: #757575;
+}

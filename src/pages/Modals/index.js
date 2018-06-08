@@ -10,20 +10,34 @@ import SideBar from 'components/SideBar';//MediaProcessTabs
 import InfoCase from 'components/InfoCase';//MediaProcessTabs
 import MediaProcessTabs from 'components/MediaProcessTabs';//MediaProcessTabs
 import ContentContainer from 'components/ContentContainer';
+
 import NoteForm from 'components/NoteForm';
 import ShareCaseForm from "../../components/ShareCaseForm";
+import AddNewModal from '../../components/AddNewModal';
 
 export default class Home extends React.Component {
     static propTypes = {};
     state = {
+        showAddNewModalOpen: false,
         noteFormModalOpen: false,
         shareCaseFormModalOpen: false
     };
+    showAddNewModal = () => {
+      this.setState({ showAddNewModalOpen: true });
+    };
+    closeAddNewModal = () => {
+      this.setState({ closeAddNewModal: false });
+    };
 
-    /*note form control */
+    handleSubmitAddNewModal = values => {
+      console.log('handleSubmitAddNewModal');
+    };
+
+
     showNoteFormModal = () => {
         this.setState({ noteFormModalOpen: true });
     };
+
 
     closeNoteFormModal = () => {
         this.setState({ noteFormModalOpen: false });
@@ -54,6 +68,20 @@ export default class Home extends React.Component {
                     <TopBar/>
                     <SideBar />
                     <ContentContainer>
+                        <Button
+                          variant="outlined"
+                          onClick={this.showAddNewModal}
+                        >
+                          Add new modal
+                        </Button>
+                        {this.state.showAddNewModalOpen && (
+                          <AddNewModal
+                            open
+                            onClose={this.closeAddNewModal}
+                            onSubmit={this.handleSubmitAddNewModal}
+                          />
+                        )}
+
 
                         {/*Note Form Button*/}
                         <Button
@@ -69,6 +97,7 @@ export default class Home extends React.Component {
                                 onSubmit={this.handleSubmitNoteForm}
                             />
                         )}
+
 
                         {/*Share Case Form Button*/}
                         <Button

@@ -13,6 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import styles from '../../css/main.css';
 const RenderTextField = ({
                              input: {value, onChange},
                              label,
@@ -78,45 +79,51 @@ export default class ShareCaseForm extends React.Component {
                 onClose={this.props.onClose}
                 disableBackdropClick
                 disableEscapeKeyDown
-                maxWidth="md"
+                maxWidth="sm"
             >
                 <form onSubmit={this.props.handleSubmit}>
-                    <DialogTitle>Share</DialogTitle>
+                    <DialogTitle className={styles.modalShareTitle}>Share
+                      <Button className={styles.modalBtnClose} onClick={this.props.onClose} >x</Button>
+                    </DialogTitle>
                     <DialogContent>
                         <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field style={{ fontWeight: 300, marginBottom: 30 }}
                                    name="email"
-                                   label="Email"
                                    component={RenderTextField}
                                    type="text"
                                    placeholder="Enter one or more email addresses"
+                                   margin="normal"
+                                   fullWidth
                             />
                         </FormControl>
                         <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field style={{ fontWeight: 300, marginBottom: 20}}
                                    name="subject"
-                                   label="Subject"
                                    component={RenderTextField}
                                    type="text"
                                    placeholder="Subject"
+                                   fullWidth
                             />
                         </FormControl>
                         <FormControl fullWidth>
-                            <Field style={{ width: 450 }}
+                            <Field style={{ fontWeight: 300}}
                                    name="message"
                                    label="Message"
                                    component={RenderTextField}
                                    type="text"
-                                   placeholder="Message"
+                                   fullWidth
+                                   multiline
+                                   rows="5"
                             />
                         </FormControl>
-
+                        <p className={styles.modalWarning}>The information that is shared in this email is confidential please only share this information to the approppriate trusted parties.</p>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={this.props.onClose} color="primary">
+                        <Button onClick={this.props.onClose} variant="raised" color="primary">
                             Cancel
                         </Button>
                         <Button
+                            variant="raised"
                             type="submit"
                             color="primary"
                             disabled={this.props.pristine}

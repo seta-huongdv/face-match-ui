@@ -50,6 +50,48 @@ export default class ProcessedContent extends React.Component {
             <Button variant="raised" color="default" className={styles.buttonRemoveSuspect}>Remove Suspect</Button>
           </div>
         </div>
+        <div className={styles.media}>
+          <div className={styles.mediaImage}>
+            <img src="https://www.raconteur.net/wp-content/uploads/2017/11/Colin-Elkins.jpg" alt="Generic placeholder image" width="120"/>
+          </div>
+          <div className={styles.mediaBody}>
+            <h5>Media heading</h5>
+            <div className={styles.certainly}>Certainly: <span className={styles.certainlyHigh}>98%</span></div>
+            <p className={styles.foundIn}><span>Found in:</span> Known offender database, Sex offender database</p>
+          </div>
+          <div className={styles.mediaAction}>
+            <Button variant="raised" color="default" className={styles.buttonViewDetail}>View Details</Button>
+            <Button variant="raised" color="default" className={styles.buttonRemoveSuspect}>Remove Suspect</Button>
+          </div>
+        </div>
+        <div className={styles.media}>
+          <div className={styles.mediaImage}>
+            <img src="https://www.raconteur.net/wp-content/uploads/2017/11/Colin-Elkins.jpg" alt="Generic placeholder image" width="120"/>
+          </div>
+          <div className={styles.mediaBody}>
+            <h5>Media heading</h5>
+            <div className={styles.certainly}>Certainly: <span className={styles.certainlyMedium}>98%</span></div>
+            <p className={styles.foundIn}><span>Found in:</span> Known offender database, Sex offender database</p>
+          </div>
+          <div className={styles.mediaAction}>
+            <Button variant="raised" color="default" className={styles.buttonViewDetail}>View Details</Button>
+            <Button variant="raised" color="default" className={styles.buttonRemoveSuspect}>Remove Suspect</Button>
+          </div>
+        </div>
+        <div className={styles.media}>
+          <div className={styles.mediaImage}>
+            <img src="https://www.raconteur.net/wp-content/uploads/2017/11/Colin-Elkins.jpg" alt="Generic placeholder image" width="120"/>
+          </div>
+          <div className={styles.mediaBody}>
+            <h5>Media heading</h5>
+            <div className={styles.certainly}>Certainly: <span className={styles.certainlyLow}>98%</span></div>
+            <p className={styles.foundIn}><span>Found in:</span> Known offender database, Sex offender database</p>
+          </div>
+          <div className={styles.mediaAction}>
+            <Button variant="raised" color="default" className={styles.buttonViewDetail}>View Details</Button>
+            <Button variant="raised" color="default" className={styles.buttonRemoveSuspect}>Remove Suspect</Button>
+          </div>
+        </div>
       </div>
     );
   }
