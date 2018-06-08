@@ -1,5 +1,6 @@
 import { NOT_FOUND } from 'redux-first-router';
 import {
+  ROUTE_MODALS,
   ROUTE_AUTH,
   ROUTE_OVERVIEW,
   ROUTE_CASE_DETAILS,
@@ -19,6 +20,11 @@ export default {
     saga: loadAuthPage,
     requiresAuth: false
   },*/
+  [ROUTE_MODALS]: {
+      path: '/modals',
+      component: 'Modals',
+      requiresAuth: false
+  },
   [ROUTE_OVERVIEW]: {
       path: '/overview',
       component: 'Overview',

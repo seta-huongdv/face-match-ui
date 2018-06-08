@@ -1,7 +1,7 @@
 // import { NOT_FOUND } from 'redux-first-router'
 // import { helpers } from 'veritone-redux-common'
 // const { createReducer } = helpers;
-
+export const ROUTE_MODALS = 'route/ROUTE_MODALS';
 export const ROUTE_AUTH = 'route/ROUTE_AUTH';
 export const ROUTE_HOME = 'route/ROUTE_HOME';
 export const ROUTE_OVERVIEW = 'route/ROUTE_OVERVIEW';
