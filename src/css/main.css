@@ -43,3 +43,52 @@
   font-style: italic;
   color: #757575;
 }
+.processContentModal{
+  margin-bottom: 30px;
+}
+.processContentModal h3{
+  font-weight: 300;
+}
+.processContentModal p{
+  font-size: 1rem;
+  color: rgba(0,0,0,0.7);
+}
+.processLeft{
+  flex: 1 1 auto;
+}
+.formControlLabel{
+  font-weight:300;
+}
+.switchFaceID{
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.switchFaceID span{
+  font-weight: 300;
+}
+.listItemProcessImage{
+  margin-top: 10px;
+}
+.itemProcessImage{
+  background: #d8d8d8;
+  height: 62px;
+}
+@media (min-width: 992px){
+  .processModal{
+    width: 930px;
+  }
+}
+@media (min-width: 1200px){
+  .processContentModal{
+    display: flex;
+  }
+  .processModal{
+    width: 1180px;
+  }
+  .processRight{
+    width: 300px;
+    margin-left: 40px;
+  }
+}

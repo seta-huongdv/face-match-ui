@@ -14,6 +14,7 @@ import ContentContainer from 'components/ContentContainer';
 import NoteForm from 'components/NoteForm';
 import ShareCaseForm from "../../components/ShareCaseForm";
 import AddNewModal from '../../components/AddNewModal';
+import ProcessModal from '../../components/ProcessModal';
 
 export default class Home extends React.Component {
     static propTypes = {};
@@ -33,12 +34,20 @@ export default class Home extends React.Component {
       console.log('handleSubmitAddNewModal');
     };
 
+    showProcessModal = () => {
+      this.setState({ processModalOpen: true });
+    };
+    closeProcessModal = () => {
+      this.setState({ processModalOpen: false });
+    };
+
+    handleSubmitProcessModal = values => {
+      console.log('handleSubmitProcessModal');
+    };
 
     showNoteFormModal = () => {
         this.setState({ noteFormModalOpen: true });
     };
-
-
     closeNoteFormModal = () => {
         this.setState({ noteFormModalOpen: false });
     };
@@ -114,6 +123,20 @@ export default class Home extends React.Component {
                             />
                         )}
 
+                      {/*Note Form Button*/}
+                      <Button
+                        variant="outlined"
+                        onClick={this.showProcessModal}
+                      >
+                        Process Modal
+                      </Button>
+                      {this.state.processModalOpen && (
+                        <ProcessModal
+                          open
+                          onClose={this.closeProcessModal}
+                          onSubmit={this.handleSubmitProcessModal}
+                        />
+                      )}
                     </ContentContainer>
                 </AppContainer>
             </Fragment>
