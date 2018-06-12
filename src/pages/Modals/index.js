@@ -21,19 +21,22 @@ export default class Home extends React.Component {
     state = {
         showAddNewModalOpen: false,
         noteFormModalOpen: false,
-        shareCaseFormModalOpen: false
+        shareCaseFormModalOpen: false,
+        processModalOpen: false
     };
+    /*share add new form control */
     showAddNewModal = () => {
       this.setState({ showAddNewModalOpen: true });
     };
     closeAddNewModal = () => {
-      this.setState({ closeAddNewModal: false });
+      this.setState({ showAddNewModalOpen: false });
     };
 
     handleSubmitAddNewModal = values => {
       console.log('handleSubmitAddNewModal');
     };
 
+    /*share process form control */
     showProcessModal = () => {
       this.setState({ processModalOpen: true });
     };
@@ -45,6 +48,7 @@ export default class Home extends React.Component {
       console.log('handleSubmitProcessModal');
     };
 
+    /*share note form control */
     showNoteFormModal = () => {
         this.setState({ noteFormModalOpen: true });
     };
