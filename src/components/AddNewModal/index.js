@@ -1,19 +1,21 @@
 import React from 'react';
-import {func, bool, object, string} from 'prop-types';
-import { reduxForm, Field } from 'redux-form';
-import { formComponents } from 'veritone-react-common';
-const { Input, Select } = formComponents;
+import {bool, func, object, string} from 'prop-types';
+import {Field, reduxForm} from 'redux-form';
+import {formComponents} from 'veritone-react-common';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import styles from '../../css/main.css';
+import styles from './styles.scss';
+
+const {Input} = formComponents;
+
 const RenderTextField = ({
                            input: {value, onChange},
                            label,
@@ -38,29 +40,46 @@ RenderTextField.propTypes = {
   label: string.isRequired,
   meta: object.isRequired
 }
-/*const validate = values => {
+
+const RenderSelectField = ({
+                             input: {value, onChange},
+                             label,
+                             meta: {touched, error},
+                             ...custom
+                           }) => (
+  <div>
+    <Select
+      value={value}
+      onChange={onChange}
+      label={label}
+      {...custom}
+    />
+    {
+      touched && ((error && <FormHelperText error>{error}</FormHelperText>))
+    }
+  </div>
+)
+
+RenderSelectField.propTypes = {
+  input: object.isRequired,
+  label: string.isRequired,
+  meta: object.isRequired
+}
+
+const validate = values => {
     const errors = {};
-    if (!values.email) {
-        errors.email = 'Required'
+    if (!values.name) {
+        errors.name = 'Required'
     }
 
-    if (!values.subject) {
-        errors.subject = 'Required'
+    if (!values.database) {
+        errors.database = 'Required'
     }
-
-    if (!values.message) {
-        errors.message = 'Required'
-    }
-
-
 
     return errors
-}*/
-@reduxForm({
-  form: 'shareCaseForm'
-})
+}
 
-export default class AddNewModal extends React.Component {
+export class AddNewModal extends React.Component {
   static propTypes = {
     handleSubmit: func.isRequired,
     onClose: func.isRequired,
@@ -69,6 +88,9 @@ export default class AddNewModal extends React.Component {
   };
   static defaultProps = {};
 
+  handleSubmit = values => {
+    console.log(JSON.stringify(values))
+  }
 
   render() {
 
@@ -83,13 +105,14 @@ export default class AddNewModal extends React.Component {
       >
         <form onSubmit={this.props.handleSubmit}>
           <DialogTitle className={styles.modalShareTitle}>Add New
-            <Button className={styles.modalBtnClose} onClick={this.props.onClose} >x</Button>
-            <p style={{marginBottom: 0, color:'#9e9e9e', fontSize: 15,marginTop: 5, minWidth: 490}}>Identify and help train face recognition engines to find this individual</p>
+            <Button className={styles.modalBtnClose} onClick={this.props.onClose}>x</Button>
+            <p style={{marginBottom: 0, color: '#9e9e9e', fontSize: 15, marginTop: 5, minWidth: 490}}>Identify and help
+              train face recognition engines to find this individual</p>
           </DialogTitle>
           <DialogContent>
             <FormControl fullWidth>
-              <Field style={{ fontWeight: 300, marginBottom: 30, marginTop: 0}}
-                     name="Name"
+              <Field style={{fontWeight: 300, marginBottom: 30, marginTop: 0}}
+                     name="name"
                      component={RenderTextField}
                      label="Name"
                      type="text"
@@ -98,14 +121,18 @@ export default class AddNewModal extends React.Component {
               />
             </FormControl>
             <FormControl fullWidth>
-              <Field style={{ fontWeight: 300, marginBottom: 20}}
-                     name="Data Base"
-                     label="Data Base"
-                     component={RenderTextField}
-                     select
-                     placeholder="Subject"
-                     fullWidth
-              />
+              <Field
+                name="database"
+                component={RenderSelectField}
+                label="Database"
+                value={10}
+                type="select"
+                margin="none"
+                fullWidth>
+                <MenuItem value={10} selected={true}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Field>
             </FormControl>
           </DialogContent>
           <DialogActions>
@@ -114,11 +141,11 @@ export default class AddNewModal extends React.Component {
             </Button>
             <Button
               variant="raised"
-              type="submit"
               color="primary"
               disabled={this.props.pristine}
+              onClick={this.props.handleSubmit}
             >
-              Share
+              Add
             </Button>
           </DialogActions>
         </form>
@@ -126,3 +153,11 @@ export default class AddNewModal extends React.Component {
     );
   }
 }
+
+export default reduxForm({
+  form: 'addPerson',
+  initialValues: {
+    database: 10
+  },
+  validate
+})(AddNewModal)
