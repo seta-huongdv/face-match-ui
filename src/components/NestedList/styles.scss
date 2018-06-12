@@ -7,20 +7,42 @@
 .nestedItem:focus{
   background: #fafafa;
 }
-.nestedText{
+.nestedTextParent{
   padding-left: 0;
+
 }
-.nestedText h3{
+.nestedTextParent h3 {
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nestedTextChild{
+  padding-right: 0;
+  padding-left: 0;
+
+}
+.nestedTextChild h3{
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nestedItemChildWrap{
   padding: 0;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 .nestedItemChild{
   padding-left: 26px;
   border-left: 3px solid transparent;
+  padding-right: 10px;
 }
 .nestedItemChild:hover,
 .nestedItemChild:active{

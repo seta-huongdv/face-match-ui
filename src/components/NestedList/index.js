@@ -61,7 +61,7 @@ class NestedList extends React.Component {
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText className={styles.nestedText}  inset primary="Active Case" />
+                        <ListItemText className={styles.nestedTextParent}  inset primary="Active Case" />
                     </ListItem>
                     <Divider />
 
@@ -71,7 +71,7 @@ class NestedList extends React.Component {
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText className={styles.nestedText} inset primary="Closed Case" />
+                        <ListItemText className={styles.nestedTextParent} inset primary="Closed Case" />
                     </ListItem>
                     <Divider />
 
@@ -81,7 +81,7 @@ class NestedList extends React.Component {
                         <ListItemIcon>
                             <PersonIcon />
                         </ListItemIcon>
-                        <ListItemText className={styles.nestedText} inset primary="Archived Case" />
+                        <ListItemText className={styles.nestedTextParent} inset primary="Archived Case" />
                     </ListItem>
                     <Collapse in={this.state.open} timeout="auto" unmountOnExit>
                         <List component="div" className={styles.nestedItemChildWrap}>
@@ -89,7 +89,7 @@ class NestedList extends React.Component {
                                 <ListItemIcon  className={styles.nestedIconChild}>
                                     <FolderIcon/>
                                 </ListItemIcon>
-                                <ListItemText className={styles.nestedText} inset  primary="Starred" />
+                                <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
                                 <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
                               <Menu
                                 id="simple-menu"
@@ -102,6 +102,193 @@ class NestedList extends React.Component {
                                 <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
                               </Menu>
                             </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
+                          <ListItem button  className={styles.nestedItemChild}>
+                            <ListItemIcon  className={styles.nestedIconChild}>
+                              <FolderIcon/>
+                            </ListItemIcon>
+                            <ListItemText className={styles.nestedTextChild} inset  primary="Starred" />
+                            <IconButton className={styles.nestedIconMore} onClick={this.handClickMoreMenu}><MoreVertIcon /></IconButton>
+                            <Menu
+                              id="simple-menu"
+                              anchorEl={anchorEl}
+                              open={Boolean(anchorEl)}
+                              onClose={this.handleMoreMenuClose}
+                            >
+                              <MenuItem onClick={this.handleMoreMenuClose}>Profile</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>My account</MenuItem>
+                              <MenuItem onClick={this.handleMoreMenuClose}>Logout</MenuItem>
+                            </Menu>
+                          </ListItem>
                         </List>
                     </Collapse>
                 </List>
