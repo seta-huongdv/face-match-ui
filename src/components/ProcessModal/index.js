@@ -17,6 +17,7 @@ import Switch from '@material-ui/core/Switch';
 
 import TextField from '@material-ui/core/TextField';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import IconClose from '@material-ui/icons/Close';
 import InfoIcon from '@material-ui/icons/Info';
 
 import styles from '../../css/main.css';
@@ -95,7 +96,7 @@ export default class ProcessModal extends React.Component {
         <div className={styles.processModal}>
           <form onSubmit={this.props.handleSubmit}>
             <DialogTitle className={styles.modalShareTitle}>Process Media File
-              <Button className={styles.modalBtnClose} onClick={this.props.onClose} >x</Button>
+              <Button className={styles.modalBtnClose} onClick={this.props.onClose} ><IconClose /></Button>
               <p style={{marginBottom: 0, color:'rgba(0,0,0,0.7)', fontSize: 15,marginTop: 5, minWidth: 490}}>Choose a database to search against. Process automatically or manually idnetify faces.</p>
             </DialogTitle>
             <DialogContent>
@@ -130,6 +131,7 @@ export default class ProcessModal extends React.Component {
                              fullWidth
                              value={this.state.database}
                              onChange={this.handleChange}
+                             className={styles.formControlInput}
                       >
                         <MenuItem value="">
                           <em>None</em>
@@ -148,6 +150,7 @@ export default class ProcessModal extends React.Component {
                              component={RenderTextField}
                              select
                              fullWidth
+                             className={styles.formControlInput}
                       >
                         <MenuItem>
                           1

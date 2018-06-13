@@ -94,6 +94,7 @@ export default class ShareCaseForm extends React.Component {
                                    placeholder="Enter one or more email addresses"
                                    margin="normal"
                                    fullWidth
+                                   className={styles.formControlInput}
                             />
                         </FormControl>
                         <FormControl fullWidth>
@@ -103,6 +104,7 @@ export default class ShareCaseForm extends React.Component {
                                    type="text"
                                    placeholder="Subject"
                                    fullWidth
+                                   className={styles.formControlInput}
                             />
                         </FormControl>
                         <FormControl fullWidth>
@@ -114,6 +116,7 @@ export default class ShareCaseForm extends React.Component {
                                    fullWidth
                                    multiline
                                    rows="5"
+                                   className={styles.formControlInput}
                             />
                         </FormControl>
                         <p className={styles.modalWarning}>The information that is shared in this email is confidential please only share this information to the approppriate trusted parties.</p>

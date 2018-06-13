@@ -56,6 +56,44 @@
 .processLeft{
   flex: 1 1 auto;
 }
+.formControlInput{
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.7);
+  font-weight: 300;
+}
+.formControlInput:before,
+.formControlInput [class^=MuiInput]:before{
+  border-bottom: 2px solid #efefef;
+}
+.formControlInput label{
+  font-size: 0.9rem;
+  color: #9e9e9e;
+}
+.creationDate{
+  margin-bottom: 30px;
+  label{
+    font-weight: 300;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.iconCalendar{
+  align-self: center;
+  margin-top: 0px;
+  margin-right: 5px;
+}
+.inputCalendar:nth-child(3){
+  width: 50px;
+}
+.inputCalendar input{
+  width: 87px;
+  font-weight: 300;
+  color: #000;
+  font-size: 0.9rem;
+}
+.inputCalendar [class^=MuiInput]:before{
+  border-bottom: 2px solid #efefef;
+}
 .formControlLabel{
   font-weight:300;
 }

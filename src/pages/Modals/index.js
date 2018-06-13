@@ -14,17 +14,40 @@ import ContentContainer from 'components/ContentContainer';
 import NoteForm from 'components/NoteForm';
 import ShareCaseForm from "../../components/ShareCaseForm";
 import AddNewModal from '../../components/AddNewModal';
+import ChooseDatabaseModal from '../../components/ChooseDatabaseModal';
 import ProcessModal from '../../components/ProcessModal';
+import ChooseDatabaseForm from "../../components/ChooseDatabaseModal";
+import NoteDetailModal from "../../components/NoteDetailModal";
 
 export default class Home extends React.Component {
     static propTypes = {};
     state = {
+        showNoteDetailModalOpen: false,
+        showChooseDatabaseModalOpen: false,
         showAddNewModalOpen: false,
         noteFormModalOpen: false,
         shareCaseFormModalOpen: false,
         processModalOpen: false
     };
-    /*share add new form control */
+    showNoteDetailModal = () => {
+      this.setState({ showNoteDetailModalOpen: true });
+    };
+    closeNoteDetailModal = () => {
+      this.setState({ showNoteDetailModalOpen: false });
+    };
+    handleSubmitNoteDetailModal = values => {
+    };
+
+    showChooseDatabaseModal = () => {
+        this.setState({ showChooseDatabaseModalOpen: true });
+    };
+    closeChooseDatabaseModal = () => {
+        this.setState({ showChooseDatabaseModalOpen: false });
+    };
+    handleSubmitChooseDatabaseModal = values => {
+    };
+
+
     showAddNewModal = () => {
       this.setState({ showAddNewModalOpen: true });
     };
@@ -82,7 +105,36 @@ export default class Home extends React.Component {
                     <TopBar/>
                     <SideBar />
                     <ContentContainer>
-                        <Button
+                      <Button
+                        variant="outlined"
+                        onClick={this.showNoteDetailModal}
+                      >
+                        Notes Detail
+                      </Button>
+                      {this.state.showNoteDetailModalOpen && (
+                        <NoteDetailModal
+                          open
+                          onClose={this.closeNoteDetailModal}
+                          onSubmit={this.handleSubmitNoteDetailModal}
+                        />
+                      )}
+
+                      <Button
+                        variant="outlined"
+                        onClick={this.showChooseDatabaseModal}
+                      >
+                        Choosee Database
+                      </Button>
+                      {this.state.showChooseDatabaseModalOpen && (
+                        <ChooseDatabaseModal
+                          open
+                          onClose={this.closeChooseDatabaseModal}
+                          onSubmit={this.handleSubmitChooseDatabaseModal}
+                        />
+                      )}
+
+
+                      <Button
                           variant="outlined"
                           onClick={this.showAddNewModal}
                         >

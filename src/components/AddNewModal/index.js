@@ -12,7 +12,8 @@ import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import styles from './styles.scss';
+import IconClose from '@material-ui/icons/Close';
+import styles from '../../css/main.css';
 
 const {Input} = formComponents;
 
@@ -105,7 +106,7 @@ export class AddNewModal extends React.Component {
       >
         <form onSubmit={this.props.handleSubmit}>
           <DialogTitle className={styles.modalShareTitle}>Add New
-            <Button className={styles.modalBtnClose} onClick={this.props.onClose}>x</Button>
+            <Button className={styles.modalBtnClose} onClick={this.props.onClose}><IconClose /></Button>
             <p style={{marginBottom: 0, color: '#9e9e9e', fontSize: 15, marginTop: 5, minWidth: 490}}>Identify and help
               train face recognition engines to find this individual</p>
           </DialogTitle>
@@ -118,6 +119,7 @@ export class AddNewModal extends React.Component {
                      type="text"
                      margin="normal"
                      fullWidth
+                     className={styles.formControlInput}
               />
             </FormControl>
             <FormControl fullWidth>
@@ -128,7 +130,9 @@ export class AddNewModal extends React.Component {
                 value={10}
                 type="select"
                 margin="none"
-                fullWidth>
+                fullWidth
+                className={styles.formControlInput}
+              >
                 <MenuItem value={10} selected={true}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>

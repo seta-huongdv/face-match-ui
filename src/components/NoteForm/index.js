@@ -13,6 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import IconClose from '@material-ui/icons/Close';
 import styles from '../../css/main.css';
 const RenderTextField = ({
        input: {value, onChange},
@@ -65,7 +66,7 @@ export default class NoteForm extends React.Component {
             >
                 <form onSubmit={this.props.handleSubmit}>
                     <DialogTitle  className={styles.modalShareTitle}>{this.props.noteModel ? 'Edit Note' : 'New Note'}
-                      <Button className={styles.modalBtnClose} onClick={this.props.onClose} >x</Button>
+                      <Button className={styles.modalBtnClose} onClick={this.props.onClose} ><IconClose /></Button>
                     </DialogTitle>
                     <DialogContent>
                         {/*<DialogContentText>
@@ -79,6 +80,7 @@ export default class NoteForm extends React.Component {
                                    defaultValue={this.props.noteModel ? this.props.noteModel.id : ''}
                                    component={RenderTextField}
                                    type="text"
+                                   className={styles.formControlInput}
                             />
                         </FormControl>
                         <FormControl fullWidth>
@@ -89,6 +91,7 @@ export default class NoteForm extends React.Component {
                             defaultValue={this.props.noteModel ? this.props.noteModel.name : ''}
                             component={RenderTextField}
                             type="text"
+                                 className={styles.formControlInput}
                           />
                         </FormControl>
                        <FormControl fullWidth>
@@ -99,6 +102,7 @@ export default class NoteForm extends React.Component {
                                    defaultValue={this.props.noteModel ? this.props.noteModel.createdDate : ''}
                                    component={RenderTextField}
                                    type="text"
+                                   className={styles.formControlInput}
                             />
                         </FormControl>
                         <FormControl fullWidth>
@@ -110,6 +114,7 @@ export default class NoteForm extends React.Component {
                                 component={RenderTextField}
                                 multiline
                                 rows="5"
+                                   className={styles.formControlInput}
                             />
                         </FormControl>
                         {this.props.noteModel && <FormControl fullWidth>
@@ -120,6 +125,7 @@ export default class NoteForm extends React.Component {
                                    component={RenderTextField}
                                    type="text"
                                    placeholder="Created By"
+                                   className={styles.formControlInput}
                             />
                         </FormControl>}
 
