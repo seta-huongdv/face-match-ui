@@ -33,6 +33,7 @@ export default class Home extends React.Component {
     };
 
     handleSubmitAddNewModal = values => {
+        console.log(values);
       console.log('handleSubmitAddNewModal');
     };
 

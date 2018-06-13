@@ -7,6 +7,7 @@ export const ROUTE_HOME = 'route/ROUTE_HOME';
 export const ROUTE_OVERVIEW = 'route/ROUTE_OVERVIEW';
 export const ROUTE_CASE_DETAILS = 'route/ROUTE_CASE_DETAILS';
 export const ROUTE_EXAMPLE_TAKEOVER = 'route/ROUTE_EXAMPLE_TAKEOVER';
+export const ROUTE_SUSPECT_DETAILS = 'route/SUSPECT_DETAILS_MODAL';
 export const ROUTE_EXAMPLE_TABS = 'route/ROUTE_EXAMPLE_TABS';
 export const ROUTE_FORBIDDEN = 'route/ROUTE_FORBIDDEN';
 

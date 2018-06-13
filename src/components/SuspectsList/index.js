@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'redux-first-router-link';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -14,6 +15,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import styles from './../MediaCard/styles.scss';
 
+import {ROUTE_SUSPECT_DETAILS} from 'state/modules/routing';
 /*const styles = {
     card: {
         maxWidth: 345,
@@ -58,7 +60,9 @@ class Suspects extends React.Component{
           />
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
-              James Williams
+                <Link to={{ type: ROUTE_SUSPECT_DETAILS }}>
+                    James Williams
+                </Link>
             </Typography>
             <Typography component="p" className={styles.mediaName}> Added: 10/22/2017</Typography>
           </CardContent>
