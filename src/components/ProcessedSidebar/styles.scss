@@ -8,10 +8,17 @@
 .navTabs{
   padding-left: 20px;
 }
+.navTabs span[class^=TabIndicator]{
+  background: #2b485c;
+}
 .tabItem{
   width: 92px;
   min-width: 92px;
 }
+.tabItem span{
+  color: #2b485c!important;
+}
+
 .thumbnailItem{
   background: #d8d8d8;
   border-radius: 10px;
