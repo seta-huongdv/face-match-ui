@@ -10,7 +10,6 @@ import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
-import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import CreateIcon from '@material-ui/icons/Create';
@@ -65,11 +64,6 @@ class EnhancedTableHead extends React.Component {
                   color: 'rgba(0,0,0,0.7)'
                 }}
               >
-                <Tooltip
-                  title="Sort"
-                  placement={column.numeric ? 'bottom-end' : 'bottom-start'}
-                  enterDelay={300}
-                >
                   <TableSortLabel
                     active={orderBy === column.id}
                     direction={order}
@@ -77,7 +71,6 @@ class EnhancedTableHead extends React.Component {
                   >
                     {column.label}
                   </TableSortLabel>
-                </Tooltip>
               </TableCell>
             );
           }, this)}
@@ -254,21 +247,15 @@ class EnhancedTable extends React.Component {
                                }}
                     >{n.createdBy}</TableCell>
                     <TableCell component="td" scope="row" width="200">
-                      <Tooltip title="Delete">
                         <IconButton aria-label="Detail">
                           <ReplyIcon/>
                         </IconButton>
-                      </Tooltip>
-                      <Tooltip title="Edit">
                         <IconButton aria-label="Edit">
                           <CreateIcon/>
                         </IconButton>
-                      </Tooltip>
-                      <Tooltip title="Delete">
                         <IconButton aria-label="Delete">
                           <DeleteIcon/>
                         </IconButton>
-                      </Tooltip>
                     </TableCell>
                   </TableRow>
                 );

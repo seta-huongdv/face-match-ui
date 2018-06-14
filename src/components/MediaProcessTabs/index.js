@@ -80,13 +80,13 @@ class MediaProcessTabs extends React.Component {
                 { value === 0 &&
                     <TabContainer>
                         <Grid container spacing={24}>
-                            <Grid item xs={6} sm={3}>
+                            <Grid item xs={6} md={4} lg={3} >
                                 <MediaCard/>
                             </Grid>
-                            <Grid item xs={6} sm={3}>
+                            <Grid item xs={6} md={4} lg={3}>
                                 <MediaCard/>
                             </Grid>
-                            <Grid item xs={6} sm={3}>
+                            <Grid item xs={6} md={4} lg={3}>
                                 <MediaCard/>
                             </Grid>
                         </Grid>
@@ -94,13 +94,13 @@ class MediaProcessTabs extends React.Component {
                 }
                 {value === 1 && <TabContainer>
                   <Grid container spacing={24}>
-                    <Grid item xs={6} sm={3}>
+                    <Grid item  xs={6} md={4} lg={3}>
                       <ProcessedList />
                     </Grid>
-                    <Grid item xs={6} sm={3}>
+                    <Grid item  xs={6} md={4} lg={3}>
                       <ProcessedList />
                     </Grid>
-                    <Grid item xs={6} sm={3}>
+                    <Grid item  xs={6} md={4} lg={3}>
                       <ProcessedList />
                     </Grid>
                   </Grid>
@@ -108,22 +108,22 @@ class MediaProcessTabs extends React.Component {
                 </TabContainer>}
                 {value === 2 && <TabContainer>
                   <Grid container spacing={24}>
-                    <Grid item xs={6} sm={2}>
+                    <Grid item xs={6} md={4} lg={2}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} sm={2}>
+                    <Grid item xs={6} md={4} lg={2}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} sm={2}>
+                    <Grid item xs={6} md={4} lg={2}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} sm={2}>
+                    <Grid item xs={6} md={4} lg={2}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} sm={2}>
+                    <Grid item xs={6} md={4} lg={2}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} sm={2}>
+                    <Grid item xs={6} md={4} lg={2}>
                       <SuspectsList />
                     </Grid>
                   </Grid>

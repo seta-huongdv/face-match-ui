@@ -102,7 +102,7 @@ export default class ProcessModal extends React.Component {
             <DialogContent>
               <div className={styles.processContentModal}>
                 <div className={styles.processLeft}>
-                  <img src="../../img/demo.png" alt=""/>
+                  <img src="../../img/demo.png" alt="" style={{maxWidth: '100%'}}/>
                   <div className={styles.switchFaceID}>
                     <FormControlLabel
                       control={

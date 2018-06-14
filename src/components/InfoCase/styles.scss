@@ -1,12 +1,11 @@
 .infoCaseWrap{
   display: flex;
   flex-wrap: wrap;
-  height: 80px;
   align-items: center;
   justify-content: space-between;
 }
 .infoCaseItem{
-  padding: 15px;
+  padding: 10px 0;
 }
 .infoCaseItem:nth-child(2),
 .infoCaseItem:nth-child(3),

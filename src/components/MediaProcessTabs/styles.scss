@@ -19,6 +19,12 @@
 }
 .tabItem{
   height: 55px;
+  min-width: 80px;
+}
+@media (min-width: 1200px){
+  .tabItem{
+    min-width: 160px;
+  }
 }
 .tabItem span{
   font-size: 16px;
@@ -33,7 +39,7 @@
   align-items: center;
 }
 .tabBarIcon{
-  width: 70px;
+  width: 50px;
   height: 55px;
   text-align: center;
   border-left: 1px solid #fff;
@@ -42,6 +48,11 @@
   text-align: center;
   justify-content: center;
   color: #72818B;
+}
+@media (min-width: 1200px){
+  .tabBarIcon{
+    width: 70px;
+  }
 }
 .tabBarSelect{
   width: 175px;

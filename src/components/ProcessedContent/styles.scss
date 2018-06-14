@@ -13,17 +13,23 @@
   margin-bottom: 30px;
 }
 .mediaBody{
-  flex: 1;
+
   padding: 0 0 0 20px;
+}
+@media (min-width: 992px) {
+  .mediaBody{
+    flex: 1;
+  }
+
+  .mediaAction{
+    align-self: center;
+  }
 }
 .mediaBody h5{
   font-size: 16px;
   margin: 0;
   font-weight: 500;
   color: #000;
-}
-.mediaAction{
-  align-self: center;
 }
 .certainly{
   margin: 15px 0 0 0;
@@ -58,6 +64,20 @@
   color: #42a5f4;
   margin-right: 20px;
   background: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.buttonRemoveSuspect{
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 1200px){
+  .buttonViewDetail,.buttonRemoveSuspect{
+    display: inline-block;
+    width: auto;
+  }
 }
 .buttonRemoveSuspect{
   color: #d0021b;
