@@ -56,8 +56,11 @@ class Suspects extends React.Component{
           <CardMedia
             className={styles.media}
             image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
-          />
+            title="Contemplative Reptile">
+            <div className={styles.thumbnail}>
+              <img src="../../img/victim1.png" alt=""/>
+            </div>
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
                 <Link to={{ type: ROUTE_SUSPECT_DETAILS }}>

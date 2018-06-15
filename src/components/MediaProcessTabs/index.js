@@ -108,22 +108,22 @@ class MediaProcessTabs extends React.Component {
                 </TabContainer>}
                 {value === 2 && <TabContainer>
                   <Grid container spacing={24}>
-                    <Grid item xs={6} md={4} lg={2}>
+                    <Grid item xs={6} md={4} lg={3}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} md={4} lg={2}>
+                    <Grid item xs={6} md={4} lg={3}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} md={4} lg={2}>
+                    <Grid item xs={6} md={4} lg={3}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} md={4} lg={2}>
+                    <Grid item xs={6} md={4} lg={3}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} md={4} lg={2}>
+                    <Grid item xs={6} md={4} lg={3}>
                       <SuspectsList />
                     </Grid>
-                    <Grid item xs={6} md={4} lg={2}>
+                    <Grid item xs={6} md={4} lg={3}>
                       <SuspectsList />
                     </Grid>
                   </Grid>

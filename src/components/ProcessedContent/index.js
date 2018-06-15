@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import IconCheck from '@material-ui/icons/Check';
 import styles from './styles.scss';
 
 export default class ProcessedContent extends React.Component {
@@ -11,6 +12,7 @@ export default class ProcessedContent extends React.Component {
         <div className={styles.media}>
             <div className={styles.mediaImage}>
               <img src="https://www.raconteur.net/wp-content/uploads/2017/11/Colin-Elkins.jpg" alt="Generic placeholder image" width="120"/>
+              <span className={styles.badge}><IconCheck /></span>
             </div>
             <div className={styles.mediaBody}>
               <h5>Media heading</h5>

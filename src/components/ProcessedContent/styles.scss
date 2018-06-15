@@ -2,6 +2,8 @@
   flex: 1;
   background: #fbfbfb;
   padding: 30px;
+  height: 86vh;
+  overflow-y: auto;
 }
 .media{
   display: -webkit-box;
@@ -11,6 +13,20 @@
   -ms-flex-align: start;
   align-items: flex-start;
   margin-bottom: 30px;
+}
+.mediaImage{
+  position: relative;
+  img{
+    border-radius: 5px;
+  }
+  .badge{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    color: #fff;
+    background: #78c61e;
+    border-radius: 50%;
+  }
 }
 .mediaBody{
 

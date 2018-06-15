@@ -1,3 +1,4 @@
+
 .processedSidebar{
   width: 240px;
   height: 100%;
@@ -18,7 +19,10 @@
 .tabItem span{
   color: #2b485c!important;
 }
-
+.content{
+  height: 83vh;
+  overflow-y: auto;
+}
 .thumbnailItem{
   background: #d8d8d8;
   border-radius: 10px;
