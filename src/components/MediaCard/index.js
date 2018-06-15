@@ -59,7 +59,9 @@ class MediaCard extends React.Component{
               className={styles.media}
               image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
               title="Contemplative Reptile"
-            />
+            >
+                <Typography component="span" className={styles.mediaHours}>10:04</Typography>
+            </CardMedia>
             <CardContent>
               <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
                 128376123.MOV
@@ -70,7 +72,6 @@ class MediaCard extends React.Component{
               <Typography component="p" className={styles.mediaDateLabel}> Date Uploaded: </Typography>
               <Typography component="span" className={styles.mediaDateDay}>10/22/2017</Typography>
               <Typography component="span" className={styles.mediaDateTime}>10:04 AM</Typography>
-              <Typography component="span" className={styles.mediaHours}>10:04</Typography>
             </CardContent>
           </Card>
         </div>

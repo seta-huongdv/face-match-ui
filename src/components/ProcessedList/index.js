@@ -65,6 +65,7 @@ class ProcessedList extends React.Component{
               <Link to={{ type: ROUTE_EXAMPLE_TAKEOVER }}>
                   <Button href="#" className={styles.viewMatches}  onClick={this.handleOpen}>View Matches</Button>
               </Link>
+              <Typography component="span" className={styles.mediaHours}>10:04</Typography>
           </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2" className={styles.mediaName}>
@@ -79,7 +80,7 @@ class ProcessedList extends React.Component{
             <Typography component="p" className={styles.mediaDateLabel}>
                 Result Found:   80
             </Typography>
-            <Typography component="span" className={styles.mediaHours}>10:04</Typography>
+
           </CardContent>
         </Card>
       </Fragment>
